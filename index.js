@@ -16,7 +16,6 @@ mongoose.connect(dbAdress)
 	.catch(err => console.log('Connected to MongoDB!!! :>> ', err))
 
 app.get('/', (req, res) => res.send('Cooltrack'))
-app.get('/test', (req, res) => res.send('test'))
 
 app.get('/items', (req, res) => {
 	Item.find()
