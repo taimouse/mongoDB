@@ -5,7 +5,9 @@ const dbAdress = 'mongodb+srv://cooltrack:sosocool@atlascluster.3jxhapi.mongodb.
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const { Item } = require('./models/Item')
+const cors = require("cors");
 
+app.use(cors());
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
 
