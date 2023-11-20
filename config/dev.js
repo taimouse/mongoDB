@@ -1,3 +1,3 @@
 module.exports = {
-	mongoURI: 'mongodb+srv://cooltrack:sosocool@atlascluster.3jxhapi.mongodb.net/?retryWrites=true&w=majority'
+	mongoURI: 'mongodb://taimouse:moss1234@svc.sel5.cloudtype.app:31666/?authMechanism=DEFAULT'
 }
