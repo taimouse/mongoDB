@@ -1,17 +1,17 @@
 const express = require('express')
 const app = express()
 const port = 5000
-const dbAdress = 'mongodb+srv://cooltrack:sosocool@atlascluster.3jxhapi.mongodb.net/?retryWrites=true&w=majority'
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const { Item } = require('./models/Item')
 const cors = require("cors");
+const config = require('./config/key')
 
 app.use(cors());
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
 
-mongoose.connect(dbAdress)
+mongoose.connect(config.mongoURI)
 	.then(() => console.log('MongoDB Connected...'))
 	.catch(err => console.log('Connected to MongoDB!!! :>> ', err))
 
