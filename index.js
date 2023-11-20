@@ -13,7 +13,7 @@ mongoose.connect(dbAdress)
 	.then(() => console.log('MongoDB Connected...'))
 	.catch(err => console.log('Connected to MongoDB!!! :>> ', err))
 
-app.get('/', (req, res) => res.send('Hellow World2'))
+app.get('/', (req, res) => res.send('Cooltrack'))
 
 app.get('/items', (req, res) => {
 	Item.find()
